@@ -1,47 +1,85 @@
-# 📊 Previsão de Estoque Inteligente na AWS com [SageMaker Canvas](https://aws.amazon.com/pt/sagemaker/canvas/)
+# Previsão de Estoque Inteligente na AWS com SageMaker Canvas
 
-Bem-vindo ao desafio de projeto "Previsão de Estoque Inteligente na AWS com SageMaker Canvas. Neste Lab DIO, você aprenderá a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning (ML). Siga os passos abaixo para completar o desafio!
+Este repositório documenta o processo de criação de um modelo de previsão de estoque utilizando o Amazon SageMaker Canvas.
 
-## 📋 Pré-requisitos
+## Objetivo
 
-Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda para criar sua conta, confira nosso repositório [AWS Cloud Quickstart](https://github.com/digitalinnovationone/aws-cloud-quickstart).
+Desenvolver um modelo de previsão de estoque utilizando o SageMaker Canvas e documentar o processo em um repositório no GitHub.
 
-
-## 🎯 Objetivos Deste Desafio de Projeto (Lab)
-
-![image](https://github.com/digitalinnovationone/lab-aws-sagemaker-canvas-estoque/assets/730492/72f5c21f-5562-491e-aa42-2885a3184650)
-
-- Dê um fork neste projeto e reescreva este `README.md`. Sinta-se à vontade para detalhar todo o processo de criação do seu Modelo de ML para uma "Previsão de Estoque Inteligente".
-- Para isso, siga o [passo a passo] descrito a seguir e evolua as suas habilidades em ML no-code com o Amazon SageMaker Canvas.
-- Ao concluir, envie a URL do seu repositório com a solução na plataforma da DIO.
-
-
-## 🚀 Passo a Passo
+## Passo a Passo
 
 ### 1. Selecionar Dataset
 
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
--   Faça o upload do dataset no SageMaker Canvas.
+1. **Acessar o SageMaker Canvas:**
+   - Faça login na sua conta AWS e acesse o Amazon SageMaker Canvas através do [Console da AWS](https://console.aws.amazon.com/sagemaker/).
 
-### 2. Construir/Treinar
+2. **Navegar até a Seção de Datasets:**
+   - No painel do SageMaker Canvas, vá para a seção de "Datasets" (Conjuntos de Dados).
 
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
--   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
+3. **Escolher um Dataset:**
+   - Na pasta `datasets` deste repositório, escolha um dataset que será utilizado para treinar seu modelo de previsão de estoque.
+   - Exemplo de datasets: `estoque.csv`, `vendas_mensais.xlsx`, etc.
+
+4. **Fazer o Upload do Dataset:**
+   - Clique em "Upload dataset" e selecione o arquivo do dataset que você escolheu.
+   - O SageMaker Canvas irá carregar e processar o dataset.
+
+### 2. Construir e Treinar
+
+1. **Importar o Dataset:**
+   - No SageMaker Canvas, vá para a seção "Projects" e clique em "Create new project" para iniciar um novo projeto.
+   - Selecione o dataset que você carregou e importe-o para o projeto.
+
+2. **Configurar as Variáveis:**
+   - Configure as variáveis de entrada e saída. Por exemplo:
+     - **Variável de Entrada**: `Data de Compra`, `Quantidade`
+     - **Variável de Saída**: `Previsão de Estoque`
+
+3. **Configurar o Modelo:**
+   - Escolha o tipo de modelo apropriado para previsão de estoque. O SageMaker Canvas pode sugerir um modelo adequado baseado no seu dataset.
+
+4. **Iniciar o Treinamento:**
+   - Clique em "Train model" para iniciar o treinamento do modelo.
+   - O processo pode levar algum tempo, dependendo do tamanho do dataset e da complexidade do modelo.
 
 ### 3. Analisar
 
--   Após o treinamento, examine as métricas de performance do modelo.
--   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
+1. **Examinar Métricas de Performance:**
+   - Após o treinamento, vá para a seção "Model performance" para revisar as métricas do modelo.
+   - Analise métricas como precisão, recall e F1 score para entender a performance do modelo.
+
+2. **Verificar Características Importantes:**
+   - No SageMaker Canvas, analise as características mais influentes que afetam as previsões.
+
+3. **Ajustar o Modelo:**
+   - Se necessário, ajuste os parâmetros do modelo ou refine o dataset.
+   - Re-treine o modelo até obter um desempenho satisfatório.
 
 ### 4. Prever
 
--   Use o modelo treinado para fazer previsões de estoque.
--   Exporte os resultados e analise as previsões geradas.
--   Documente suas conclusões e qualquer insight obtido a partir das previsões.
+1. **Fazer Previsões:**
+   - Use o modelo treinado para fazer previsões sobre novos dados.
+   - Vá para a seção "Predictions" e insira os dados que deseja prever.
 
-## 🤔 Dúvidas?
+2. **Exportar e Analisar Resultados:**
+   - Exporte os resultados das previsões em formato CSV ou Excel.
+   - Analise as previsões geradas para insights sobre o estoque.
 
-Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
+### Conclusões
+
+- **Insights e Observações:**
+  - Documente quaisquer insights ou conclusões obtidas a partir das previsões de estoque.
+  - Por exemplo: "O modelo prevê um aumento na demanda para o próximo trimestre, sugerindo a necessidade de aumentar o estoque."
+
+## Recursos Adicionais
+
+- [Documentação Oficial do SageMaker Canvas](https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html)
+- [Guia de Introdução ao SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html)
+- [Tutoriais e Exemplos Práticos](https://aws.amazon.com/getting-started/hands-on/)
+- [Repositório de Exemplo](https://github.com/awslabs/amazon-sagemaker-examples)
+
+## Contato
+
+Para mais informações, entre em contato:
+- [Natália Barreto](https://www.linkedin.com/in/natáliabarreto/)
+- [GitHub](https://github.com/barretonatty)
